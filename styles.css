@@ -9,9 +9,14 @@
 body {
     font-family: 'Jost', sans-serif;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     background: #1a1520;
     color: #f0e6d3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Typography */
@@ -69,7 +74,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 2rem;
 }
 
@@ -121,13 +126,28 @@ p {
 }
 
 #restart-btn:hover {
-    background: #EC7FAA;
+    background: #D4C05E;
 }
 
 /* Hover rotation on unflipped cards*/
 .card:not(.flipped):not(.matched):hover .card-inner {
     transform: rotate(1.5deg);
     transition: transform 0.2s;
+}
+
+/* Matched State */
+@keyframes match-bump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+.card.matched {
+    border: 2px solid #D4C05E;
+    border-radius: 13px;
+    animation: match-bump 0.3s ease-out;
+    outline-offset: -2px;
 }
 
 /* Images - Strongest Selections top 8

@@ -1,5 +1,14 @@
 // --- State --- //
-const symbols = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+const symbols = [
+  'yellow-on-purple.png',
+  'purple-on-yellow.png',
+  'blue-on-green.png',
+  'green-on-yellow.png',
+  'pink-on-green.png',
+  'blue-on-pink.png',
+  'red-on-blue.png',
+  'green-on-red.png'
+];
 let cards = [];
 let flippedCards = [];
 let matchedCount = 0;
@@ -41,7 +50,7 @@ function createBoard() {
     card.innerHTML = `
       <div class="card-inner">
         <div class="card-back">?</div>
-        <div class="card-front">${symbol}</div>
+        <div class="card-front"><img src="images/${symbol}" alt="card"></div>
       </div>
     `;
  

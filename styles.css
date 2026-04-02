@@ -24,7 +24,7 @@ p {
 /* Game Board */
 #game-board {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: repeat(4, 120px);
     gap: 10px;
     justify-content: center;
     margin-bottom: 1rem;
@@ -32,8 +32,8 @@ p {
 
 /* Card Container */
 .card {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 170px;
     perspective: 500px;
     cursor: pointer;
 }
@@ -74,6 +74,15 @@ p {
 .card-front {
     background: #fff;
     transform: rotateY(180deg);
+    overflow: hidden;
+}
+
+/* Card Images */
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 /* Matched State */
@@ -88,3 +97,13 @@ p {
     font-size: 1rem;
     cursor: pointer;
 }
+
+/* Images - Strongest Selections top 8
+1. pink on green - 
+2. green on yellow - 
+3. blue on pink - 
+4. red on blue - 
+5. yellow on purple - 
+6. green on red - 
+7. blue on green - 
+8. purple on yellow - 
